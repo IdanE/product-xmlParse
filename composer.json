@@ -3,7 +3,7 @@
     "description": "Parse product records mandated by price transparency regulations in Israel",
     "type": "library",
 	"minimum-stability": "dev",
-	"prefer-stable":, true,
+	"prefer-stable": true,
     "require": {
         "sabre/xml": "^2.0"
     },

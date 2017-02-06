@@ -1,7 +1,5 @@
 <?php
-namespace Idane;
-require_once '../vendor/autoload.php';
-require_once('ProductInterface.php');
+namespace Idane\ProductParser;
 
 use Sabre\Xml;
 
@@ -10,10 +8,10 @@ class ProductParser implements ProductParserInterface
     private $service;
     private $xml;
 
-    public function __construct($xml, Xml\Service $service)
+    public function __construct($xml)
     {
 
-        $this->service = $service;
+        $this->service = new Xml\Service();
         $this->xml = $xml;
     }
     public function parse()

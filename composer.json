@@ -5,7 +5,7 @@
 	"minimum-stability": "dev",
 	"prefer-stable": true,
     "autoload" : {
-        "psr-4" : {"idane\\" : "src"}
+        "psr-4" : {"Idane\\ProductParser\\" : "src/"}
     },
     "require": {
         "sabre/xml": "^2.0"

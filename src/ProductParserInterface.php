@@ -1,5 +1,5 @@
 <?php
-namespace Idane;
+namespace Idane\ProductParser;
 interface ProductParserInterface
 {
     const ROOT_ALIAS = 'root';

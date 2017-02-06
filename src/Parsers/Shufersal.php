@@ -1,7 +1,7 @@
 <?php
 
-namespace Idane\Parsers;
-use Idane\ProductParser;
+namespace Idane\ProductParser\Parsers;
+use Idane\ProductParser\ProductParser;
 
 class Shufersal extends ProductParser
 {

@@ -1,0 +1,15 @@
+{
+    "name": "idane/product-parse",
+    "description": "Parse product records mandated by price transparency regulations in Israel",
+    "type": "library",
+    "require": {
+        "sabre/xml": "^2.0"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Idan Elhalwani",
+            "email": "idan@elhalwani.com"
+        }
+    ]
+}

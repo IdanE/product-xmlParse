@@ -5,7 +5,7 @@ require_once('ProductInterface.php');
 
 use Sabre\Xml;
 
-class ProductParser implements \ProductParserInterface
+class ProductParser implements ProductParserInterface
 {
     private $service;
     private $xml;

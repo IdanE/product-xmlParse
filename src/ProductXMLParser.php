@@ -3,7 +3,7 @@ namespace Idane\ProductParser;
 
 use Sabre\Xml;
 
-class ProductParser implements ProductParserInterface
+class ProductXMLParser implements ProductParserInterface
 {
     private $service;
     private $xml;

@@ -27,6 +27,7 @@ class ProductXMLParser implements ProductParserInterface
                 return Xml\Deserializer\repeatingElements($reader,'{}'.static::PRODUCT_ALIAS);
             },
         ];
+
         return $this->service->parse($this->xml);
     }
 }

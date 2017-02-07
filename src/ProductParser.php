@@ -7,7 +7,7 @@ class ProductParser
     private $xml;
     private $chainId;
     private $storeId;
-    public function __construct($filename)
+    public function parse($filename)
     {
         $this->filename = $filename;
         $this->xml = file_get_contents($this->filename);
@@ -19,11 +19,11 @@ class ProductParser
 
         $this->chainId = $match['chainId'];
         $this->storeId = $match['storeId'];
-
-
-    }
-    public function parse()
-    {
+        $chains = Constants::CHAINS;
+        if(!isset($chains[$this->chainId]))
+        {
+            throw new \Exception("Unrecognized Chain ID");
+        }
         $className = Constants::CHAINS[$this->chainId]['class'];
         $chainName = Constants::CHAINS[$this->chainId]['friendly_name'];
         $parser = new $className($this->xml);
@@ -36,7 +36,7 @@ class ProductParser
             $_product->chainId = $this->chainId;
             $_product->chainName = $chainName;
             $_product->name = $entry['ItemName'];
-            $_product->price = $entry['ItemPrice'];
+            $_product->price = floatval($entry['ItemPrice']);
             $products[] = $_product;
 
         }

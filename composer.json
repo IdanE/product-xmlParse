@@ -8,8 +8,7 @@
         "psr-4" : {"Idane\\ProductParser\\" : "src/"}
     },
     "require": {
-        "sabre/xml": "^2.0",
-        "vipsoft/unzip": "^1.2"
+        "sabre/xml": "^2.0"
     },
     "license": "MIT",
     "authors": [
@@ -17,5 +16,8 @@
             "name": "Idan Elhalwani",
             "email": "idan@elhalwani.com"
         }
-    ]
+    ],
+    "require-dev": {
+        "phpunit/phpunit": "^6.0"
+    }
 }

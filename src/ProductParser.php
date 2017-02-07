@@ -32,11 +32,11 @@ class ProductParser
         foreach($result[$className::PRODUCT_CONTAINER] as $entry)
         {
             $_product = new Product();
-            $_product->storeId = $this->storeId;
-            $_product->chainId = $this->chainId;
-            $_product->chainName = $chainName;
-            $_product->name = $entry['ItemName'];
-            $_product->price = floatval($entry['ItemPrice']);
+            $_product->setStoreId($this->storeId);
+            $_product->setChainId($this->chainId);
+            $_product->setChainName($chainName);
+            $_product->setName($entry['ItemName']);
+            $_product->setPrice(floatval($entry['ItemPrice']));
             $products[] = $_product;
 
         }

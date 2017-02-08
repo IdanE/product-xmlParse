@@ -10,4 +10,21 @@ class Store
         $this->storeId = $storeId;
         $this->storeName = $storeName;
     }
+
+    /**
+     * @return integer
+     */
+    public function getStoreId()
+    {
+        return $this->storeId;
+    }
+
+    /**
+     * @return string
+     */
+    public function getStoreName()
+    {
+        return $this->storeName;
+    }
+
 }

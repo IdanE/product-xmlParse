@@ -11,4 +11,21 @@ class Chain
         $this->chainId = $chainId;
         $this->chainName = $chainName;
     }
+
+    /**
+     * @return string
+     */
+    public function getChainId()
+    {
+        return $this->chainId;
+    }
+    /**
+     * @return string
+     */
+    public function getChainName()
+    {
+        return $this->chainName;
+    }
+
+
 }

@@ -28,13 +28,13 @@ class ProductParser
         $chainName = Constants::CHAINS[$this->chainId]['friendly_name'];
         $parser = new $className($this->xml);
         $result = $parser->parse($this->xml);
-        $trueChainId = $result['ChainID'];
+        $trueChainId = $result[$className::CHAINID_ALIAS];
         if($trueChainId != $this->chainId){
             $this->chainId = $trueChainId;
         }
-        $this->storeId = $result['StoreID'];
+        $this->storeId = $result[$className::STOREID_ALIAS];
         $products = [];
-        foreach($result[$className::PRODUCT_CONTAINER] as $entry)
+        foreach($result[$className::PRODUCTS_ALIAS] as $entry)
         {
             $_product = new Product();
             $_product->setStoreId($this->storeId);

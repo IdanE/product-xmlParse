@@ -23,7 +23,7 @@ class ProductXMLParser implements ProductParserInterface
             '{}'.static::PRODUCT_ALIAS => function(Xml\Reader $reader) {
                 return Xml\Deserializer\keyValue($reader, '');
             },
-            '{}'.static::PRODUCT_CONTAINER => function(Xml\Reader $reader){
+            '{}'.static::PRODUCTS_ALIAS => function(Xml\Reader $reader){
                 return Xml\Deserializer\repeatingElements($reader,'{}'.static::PRODUCT_ALIAS);
             },
         ];

@@ -6,5 +6,7 @@ use Idane\ProductParser\ProductXMLParser;
 class Shufersal extends ProductXMLParser
 {
     const PRODUCT_ALIAS = "Item";
-    const PRODUCT_CONTAINER = "Items";
+    const PRODUCTS_ALIAS = "Items";
+    const CHAINID_ALIAS = "ChainId";
+    const STOREID_ALIAS = "StoreId";
 }

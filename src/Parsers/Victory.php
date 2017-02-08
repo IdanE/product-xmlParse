@@ -6,5 +6,7 @@ class Victory extends ProductXMLParser
 {
     const ROOT_ALIAS = 'Prices';
     const PRODUCT_ALIAS = "Product";
-    const PRODUCT_CONTAINER = "Products";
+    const PRODUCTS_ALIAS = "Products";
+    const CHAINID_ALIAS = "ChainID";
+    const STOREID_ALIAS = "StoreID";
 }

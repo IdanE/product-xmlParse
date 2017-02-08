@@ -3,11 +3,27 @@
 namespace Idane\ProductParser;
 class Product
 {
+    private $itemCode;
     private $chainId;
     private $chainName;
     private $storeId;
     private $name;
     private $price;
+    /**
+     * @return mixed
+     */
+    public function getItemCode()
+    {
+        return $this->itemCode;
+    }
+
+    /**
+     * @param mixed $itemCode
+     */
+    public function setItemCode($itemCode)
+    {
+        $this->itemCode = $itemCode;
+    }
     /**
      * @return string
      */

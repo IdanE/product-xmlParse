@@ -35,6 +35,7 @@ class ProductParser
             $_product->setStoreId($this->storeId);
             $_product->setChainId($this->chainId);
             $_product->setChainName($chainName);
+            $_product->setItemCode($entry['ItemCode']);
             $_product->setName($entry['ItemName']);
             $_product->setPrice(floatval($entry['ItemPrice']));
             $products[] = $_product;

@@ -1,6 +1,5 @@
 <?php
-use PHPUnit\Framework\TestCase;
-class ShufersalTest extends TestCase
+class ShufersalTest extends \PHPUnit\Framework\TestCase
 {
     public function testParse()
     {

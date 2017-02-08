@@ -18,7 +18,7 @@ class ProductParser
         }
 
         $this->chainId = $match['chainId'];
-        $this->storeId = $match['storeId'];
+
         $chains = Constants::CHAINS;
         if(!isset($chains[$this->chainId]))
         {
@@ -28,6 +28,11 @@ class ProductParser
         $chainName = Constants::CHAINS[$this->chainId]['friendly_name'];
         $parser = new $className($this->xml);
         $result = $parser->parse($this->xml);
+        $trueChainId = $result['ChainId'];
+        if($trueChainId != $this->chainId){
+            $this->chainId = $trueChainId;
+        }
+        $this->storeId = $result['StoreId'];
         $products = [];
         foreach($result[$className::PRODUCT_CONTAINER] as $entry)
         {
